@@ -6,7 +6,6 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    /* background: linear-gradient(to right, #f74c06, #f9bc2c); */
     background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('https://rohan3004.github.io/Face-Frenzy/images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -89,4 +88,6 @@ button:hover {
 
 .credits{
     padding-top: 10%;
+    align-items: center;
+    text-align: center;
 }
