@@ -6,13 +6,17 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background: linear-gradient(to right, #f74c06, #f9bc2c);
+    /* background: linear-gradient(to right, #f74c06, #f9bc2c); */
+    background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('/images/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    color: white;
+    min-height: 100vh;
+    color: #F7F6BB
 }
 
 h1 {
@@ -21,9 +25,9 @@ h1 {
 }
 
 button {
-    background-color: #006bb3;
+    background-color: #87A922;
     border: none;
-    color: white;
+    color: #F7F6BB;
     padding: 10px 20px;
     font-size: 1rem;
     cursor: pointer;
@@ -33,6 +37,7 @@ button {
 button:hover {
     background-color: #005699;
 }
+
 
 #score {
     font-size: 32px;
@@ -55,7 +60,7 @@ button:hover {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background-color: #5F4B8BFF;
+    background-color: #114232;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -80,4 +85,8 @@ button:hover {
 
 .hole img.clicked {
     border: 4px solid tomato;
+}
+
+.credits{
+    padding-top: 10%;
 }

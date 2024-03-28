@@ -11,7 +11,7 @@ const highSound = document.getElementById("high-sound");
 const bgmSound = document.getElementById("bgm-sound");
 
 let score = 0;
-let time = 30;
+let time = 60;
 let isPlaying = false;
 let countdown;
 
@@ -48,7 +48,7 @@ function displayImage() {
 // Function to start the game
 function startGame() {
     score = 0;
-    time = 30;
+    time = 60;
     isPlaying = true;
     startButton.disabled = true;
     startButton.textContent = "Playing...";
@@ -73,7 +73,7 @@ function startGame() {
             startButton.disabled = false;
             startButton.textContent = "Start Game";
             timeDisplay.textContent = getMessage();
-            score > 20 ? highSound.play() : endSound.play();
+            score > 40 ? highSound.play() : endSound.play();
             bgmSound.pause();
         }
     }, 1000);
@@ -113,11 +113,11 @@ holes.forEach(hole => {
 function getMessage() {
     if (score === 0) {
         return "You blinked, didn't you?";
-    } else if (score < 10) {
-        return "Nice effort! Keep practicing!";
     } else if (score < 20) {
+        return "Nice effort! Keep practicing!";
+    } else if (score < 40) {
         return "You're getting good at this!";
     } else {
-        return "Wow, you're a FaceBomp champion!";
+        return "Wow, you're a Face Frenzy champion!";
     }
 }
