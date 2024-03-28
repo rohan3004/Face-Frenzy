@@ -1,5 +1,4 @@
 
-
 body {
     margin: 0;
     padding: 0;
@@ -50,14 +49,14 @@ button:hover {
 
 .game-board {
     display: grid;
-    grid-template-columns: repeat(3, 150px);
+    grid-template-columns: repeat(3, 15vh);
     gap: 20px;
     margin-top: 30px;
 }
 
 .hole {
-    width: 150px;
-    height: 150px;
+    width: 15vh;
+    height: 15vh;
     border-radius: 50%;
     background-color: #114232;
     display: flex;
@@ -66,6 +65,16 @@ button:hover {
     position: relative;
     overflow: hidden;
     box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .game-board {
+        grid-template-columns: repeat(3, 10vh);
+    }
+    .hole {
+        width: 10vh;
+        height: 10vh;
+    }
 }
 
 .hole img {
@@ -84,10 +93,4 @@ button:hover {
 
 .hole img.clicked {
     border: 4px solid tomato;
-}
-
-.credits{
-    padding-top: 10%;
-    align-items: center;
-    text-align: center;
 }
