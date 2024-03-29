@@ -18,6 +18,7 @@ body {
     text-align: center;
 }
 
+
 h1 {
     font-size: 3rem;
     margin-bottom: 2vh;
@@ -34,25 +35,9 @@ button {
     border-radius: 5px;
 }
 
+
 .details{
     padding: 5vh;
-}
-
-input[type="text"] {
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-    background-color: rgba(255, 255, 255, 0.8); /* 80% white background */
-}
-
-input[type="text"]:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    background-color: rgba(255, 255, 255, 1); /* Full white background on focus */
 }
 
 button:hover {
@@ -105,6 +90,10 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    }
+    button{
+        margin: 1vh;
+    
     }
 }
 

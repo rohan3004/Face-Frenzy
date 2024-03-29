@@ -3,7 +3,7 @@ const startButton = document.getElementById("startButton");
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("timer");
 const holes = document.querySelectorAll(".hole");
-const save = document.getElementById("save");
+// const save = document.getElementById("save");
 const textbox = document.getElementById("userNameInput");
 
 // Select audio elements for sounds
@@ -51,7 +51,6 @@ function displayImage() {
 // Function to start the game
 function startGame() {
     score = 0;
-    time = 60;
     isPlaying = true;
     startButton.disabled = true;
     startButton.textContent = "You're playing!";
@@ -143,30 +142,15 @@ function updateHighScore(score) {
     }
 }
 
-// Save the user's name
-function saveUserName() {
-    if(userSet == false){
-    userName = document.getElementById('userNameInput').value || 'Player';
-    localStorage.setItem('userName', userName);
-    document.getElementById('userNameDisplay').textContent = userName;
-    userSet = true;
-    save.textContent = "Clear";
-    }
-    else{
-        clearUserName();
-        userSet = false;
-        save.textContent = "Save";
-        textbox.value = "";
-    }
-}
 
-// Clear the user's name
-function clearUserName() {
-    userName = 'Player';
-    localStorage.removeItem('userName');
-    document.getElementById('userNameDisplay').textContent = userName;
-}
 
 // Display the initial high score and user's name
 document.getElementById('highScore').textContent = highScore;
-document.getElementById('userNameDisplay').textContent = userName;
+
+
+function startime(e) {
+    if(isPlaying==false){
+    time=e;
+    timeDisplay.textContent = `Time left: ${time}`;
+    }
+}

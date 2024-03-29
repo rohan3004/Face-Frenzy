@@ -16,9 +16,11 @@
     
     <div id="detail">
         <p>High Score: <span id="highScore"></span></p>
-        <p>User Name: <span id="userNameDisplay"></span></p>
-        <input type="text" id="userNameInput" placeholder="Enter your name">
-        <button id="save" onclick="saveUserName()">Save</button>
+        <button id="save" onclick="startime(15)">15</button>
+        <button id="save" onclick="startime(30)">30</button>
+        <button id="save" onclick="startime(45)">45</button>
+        <button id="save" onclick="startime(60)">60</button>
+        <button id="save" onclick="startime(120)">120</button>
         <button id="startButton">Start Game</button>
     </div>
    
@@ -56,7 +58,7 @@
         </div>
         
     </div>
-    <h1>Made with 💖 by Rohan Chakravarty</h1>
+    <h3>Made with 💖 by Rohan Chakravarty</h3>
     <audio id="bomp-sound" src="sounds/bomp.wav"></audio>
     <audio id="end-sound" src="sounds/game-end.wav"></audio>
     <audio id="high-sound" src="sounds/game-end_high.wav"></audio>
