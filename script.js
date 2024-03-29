@@ -58,7 +58,7 @@ function startGame() {
     bgmSound.currentTime = 0;
     bgmSound.play();
     bgmSound.volume = 0.65;
-    bgmSound.loop = true;
+    // bgmSound.loop = true;
 
     // Display the initial score and time
     scoreDisplay.textContent = `Score: ${score}`;
