@@ -51,7 +51,7 @@ function displayImage() {
 // Function to start the game
 function startGame() {
     score = 0;
-    time = 10;
+    time = 60;
     isPlaying = true;
     startButton.disabled = true;
     startButton.textContent = "You're playing!";
