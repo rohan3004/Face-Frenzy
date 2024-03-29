@@ -3,14 +3,14 @@
     "description": "A fun game to pop sinchan",
     "version": "v0.1",
     "short_name": "Face Frenzy",
-    "start_url": "/index.html",
+    "start_url": "/",
     "display": "standalone",
     "theme_color": "#87A922",
-    "background_color": "#87A922",
+    "background_color": "#FCDC2A",
     "icons": [
         {
             "src": "/images/favicon.png",
-            "sizes": "192x192",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ]
