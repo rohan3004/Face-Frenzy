@@ -35,7 +35,7 @@ function displayImage() {
     randomHole.classList.add("active");
 
     // Set a random time for the image to be displayed
-    const time = randomTime(500, 1500);
+    const time = randomTime(600, 2000);
     
     // After the set time, hide the image
     setTimeout(() => {
