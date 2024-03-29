@@ -3,6 +3,8 @@ const startButton = document.getElementById("startButton");
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("timer");
 const holes = document.querySelectorAll(".hole");
+const save = document.getElementById("save");
+const textbox = document.getElementById("userNameInput");
 
 // Select audio elements for sounds
 const bompSound = document.getElementById("bomp-sound");
@@ -14,6 +16,7 @@ let score = 0;
 let time = 60;
 let isPlaying = false;
 let countdown;
+let userSet = false;
 
 // Function to generate a random time interval
 function randomTime(min, max) {
@@ -48,7 +51,7 @@ function displayImage() {
 // Function to start the game
 function startGame() {
     score = 0;
-    time = 60;
+    time = 10;
     isPlaying = true;
     startButton.disabled = true;
     startButton.textContent = "You're playing!";
@@ -76,6 +79,7 @@ function startGame() {
             timeDisplay.textContent = getMessage();
             score > 40 ? highSound.play() : endSound.play();
             bgmSound.pause();
+            updateHighScore(score);
         }
     }, 1000);
 
@@ -122,3 +126,47 @@ function getMessage() {
         return "Wow, you're a Face Frenzy champion!";
     }
 }
+
+// Implement highScore and userName
+
+// Initialize the high score and user name
+let highScore = localStorage.getItem('highScore') || 0;
+let userName = localStorage.getItem('userName') || 'Player';
+
+// Update the high score
+function updateHighScore(score) {
+    if (score > highScore) {
+        highScore = score;
+        localStorage.setItem('highScore', score);
+        document.getElementById('highScore').textContent = highScore;
+
+    }
+}
+
+// Save the user's name
+function saveUserName() {
+    if(userSet == false){
+    userName = document.getElementById('userNameInput').value || 'Player';
+    localStorage.setItem('userName', userName);
+    document.getElementById('userNameDisplay').textContent = userName;
+    userSet = true;
+    save.textContent = "Clear";
+    }
+    else{
+        clearUserName();
+        userSet = false;
+        save.textContent = "Save";
+        textbox.value = "";
+    }
+}
+
+// Clear the user's name
+function clearUserName() {
+    userName = 'Player';
+    localStorage.removeItem('userName');
+    document.getElementById('userNameDisplay').textContent = userName;
+}
+
+// Display the initial high score and user's name
+document.getElementById('highScore').textContent = highScore;
+document.getElementById('userNameDisplay').textContent = userName;

@@ -14,7 +14,14 @@
 <body>
     <h1>😝 PoP Me 😝</h1>
     
-    <button id="startButton">Start Game</button>
+    <div id="detail">
+        <p>High Score: <span id="highScore"></span></p>
+        <p>User Name: <span id="userNameDisplay"></span></p>
+        <input type="text" id="userNameInput" placeholder="Enter your name">
+        <button id="save" onclick="saveUserName()">Save</button>
+        <button id="startButton">Start Game</button>
+    </div>
+   
     <p id="score">Score: 0</p>
     
     <div id="timer">Time left: <span id="time">60</span></div>

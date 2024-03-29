@@ -14,15 +14,17 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    color: #F7F6BB
+    color: #F7F6BB;
+    text-align: center;
 }
 
 h1 {
     font-size: 3rem;
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
 }
 
 button {
+    margin-right: 1vh;
     background-color: #87A922;
     border: none;
     color: #F7F6BB;
@@ -30,6 +32,27 @@ button {
     font-size: 1rem;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.details{
+    padding: 5vh;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+    background-color: rgba(255, 255, 255, 0.8); /* 80% white background */
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    background-color: rgba(255, 255, 255, 1); /* Full white background on focus */
 }
 
 button:hover {
@@ -74,6 +97,14 @@ button:hover {
     .hole {
         width: 10vh;
         height: 10vh;
+    }
+    input[type="text"]{
+        margin-bottom: 2vh;
+    }
+    .details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     }
 }
 
