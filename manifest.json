@@ -5,8 +5,8 @@
     "short_name": "Face Frenzy",
     "start_url": "https://rohan3004.github.io/Face-Frenzy/",
     "display": "standalone",
-    "theme_color": "#87A922",
-    "background_color": "#FCDC2A",
+    "theme_color": "#481E14",
+    "background_color": "#0C0C0C",
     "icons": [
         {
             "src": "https://rohan3004.github.io/Face-Frenzy/images/favicon.png",
