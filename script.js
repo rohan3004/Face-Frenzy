@@ -12,6 +12,42 @@ const endSound = document.getElementById("end-sound");
 const highSound = document.getElementById("high-sound");
 const bgmSound = document.getElementById("bgm-sound");
 
+const headings = ["PoP Me","Did You Just Blink?","Catch Me!!","The cake is a lie","War never changes","Do a barrel roll!","Hey! Listen!","Finish him!","Would you kindly..."];
+
+let currentHeadingIndex = 0;
+const typingHeading = document.getElementById("typing-heading");
+
+function typeHeading() {
+    typingHeading.textContent = "";
+    const currentHeading = headings[currentHeadingIndex];
+    let charIndex = 0;
+
+    function type() {
+        if (charIndex < currentHeading.length) {
+            typingHeading.textContent += currentHeading.charAt(charIndex);
+            charIndex++;
+            setTimeout(type, 100); // Adjust typing speed here
+        } else {
+            setTimeout(erase, 2000); // Wait before erasing
+        }
+    }
+
+    function erase() {
+        if (charIndex > 0) {
+            typingHeading.textContent = currentHeading.substring(0, charIndex - 1);
+            charIndex--;
+            setTimeout(erase, 50); // Adjust erasing speed here
+        } else {
+            currentHeadingIndex = (currentHeadingIndex + 1) % headings.length;
+            typeHeading(); // Start typing next heading
+        }
+    }
+
+    type();
+}
+
+typeHeading(); // Start typing animation
+
 let score = 0;
 let time = 60;
 let isPlaying = false;
@@ -35,7 +71,7 @@ function displayImage() {
     randomHole.classList.add("active");
 
     // Set a random time for the image to be displayed
-    const time = randomTime(150, 700);
+    const time = randomTime(200, 400);
     
     // After the set time, hide the image
     setTimeout(() => {
