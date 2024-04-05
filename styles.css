@@ -5,7 +5,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('/images/backgroud_new.jpg');
+    background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('https://raw.githubusercontent.com/rohan3004/Face-Frenzy/main/images/backgroud_new.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -35,7 +35,7 @@ h1 {
     word-wrap: break-word;
     margin-left: auto;
     margin-right: auto;
-    height: 45px;
+    height: 50px;
 }
 
 
@@ -69,9 +69,6 @@ button {
 }
 
 
-.details{
-    padding: 5vh;
-}
 
 button:hover {
     background-color: #114232;
@@ -111,7 +108,10 @@ button:hover {
 @media (max-width: 768px) {
     #typing-heading {
         font-size: 2rem;
-        /* margin-top: 2vh; */
+    }
+    #detail{
+        margin-top: 0px;
+        padding-top: 0px;
     }
     .game-board {
         grid-template-columns: repeat(3, 10vh);
