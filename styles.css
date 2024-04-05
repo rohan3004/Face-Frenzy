@@ -5,7 +5,7 @@ body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
     font-style: normal;
-    background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('images/desk_background.png');
+    background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('https://rohan3004.github.io/Face-Frenzy/images/desk_background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -107,7 +107,7 @@ button:hover {
 
 @media (max-width: 768px) {
     body{
-        background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('/images/mobile.gif');
+        background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('https://rohan3004.github.io/Face-Frenzy/images/mobile.gif');
     }
     #typing-heading {
         font-size: 2rem;
