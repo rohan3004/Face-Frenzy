@@ -79,6 +79,7 @@ function startGame() {
             score > 40 ? highSound.play() : endSound.play();
             bgmSound.pause();
             updateHighScore(score);
+            time=60;
         }
     }, 1000);
 
