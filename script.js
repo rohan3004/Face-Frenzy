@@ -163,7 +163,7 @@ document.getElementById('music-select').addEventListener('change', function() {
   });
 
 
-fetch(`http://api.weatherapi.com/v1/current.json?key=fc9c2d13772441e9b72191328240604&q=Kolkata`)
+fetch(`https://api.weatherapi.com/v1/current.json?key=fc9c2d13772441e9b72191328240604&q=Kolkata`)
 .then(response => response.json())
 .then(data => {
   const { temp_c, wind_kph, feelslike_c, humidity, condition } = data.current;
