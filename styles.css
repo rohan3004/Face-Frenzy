@@ -18,16 +18,28 @@ body {
     text-align: center;
 }
 
+select {
+    height: 38px;
+    width: 20vh;
+    margin: 2 px;
+    padding: 5px;
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: #333;
+  }
 
 h1 {
     font-size: 3rem;
     margin-bottom: 1vh;
 }
 
-#typing-heading{
-    margin-top: 2vh;
+
+#typing-footer{
+    margin-top: 5vh;
     overflow: hidden;
-    /* border-right: 2px solid #000; */
     overflow: hidden;
     white-space: nowrap;
     animation: typing 3s steps(30) forwards, blink-caret 0.5s step-end infinite alternate;
@@ -35,9 +47,8 @@ h1 {
     word-wrap: break-word;
     margin-left: auto;
     margin-right: auto;
-    height: 54px;
+    height: 20px;
 }
-
 
 @keyframes typing {
     from {
@@ -109,8 +120,16 @@ button:hover {
     body{
         background-image: linear-gradient(to right, rgba(247, 76, 6, 0.5), rgba(249, 188, 44, 0.5)), url('https://rohan3004.github.io/Face-Frenzy/images/mobile.gif');
     }
-    #typing-heading {
-        font-size: 2rem;
+    select{
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 2.5rem;
+    }
+    
+    #typing-footer {
+        font-size: 1rem;
     }
     #detail{
         margin-top: 0px;

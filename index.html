@@ -12,10 +12,15 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1 id="typing-heading"></h1>
-    
+    <h1>😏 Spank Me 😂</h1>
+    <h2>High Score: <span id="highScore"></span></h2>
     <div id="detail">
-        <p>High Score: <span id="highScore"></span></p>
+        <select id="music-select">
+            <option value="sounds/bgm.mp3">Chipi Chipi Chapa Chapa</option>
+            <option value="sounds/bgm-new.wav">Khoka Babu</option>
+            <option value="sounds/bgm_new.mp3">Industry x Nagada Sang</option>
+            <option value="sounds/Magenta Riddim (320 kbps).mp3">Magenta Riddim</option>
+          </select>
         <button id="save" onclick="startime(15)">15</button>
         <button id="save" onclick="startime(30)">30</button>
         <button id="save" onclick="startime(45)">45</button>
@@ -24,7 +29,7 @@
         <button id="startButton">Start Game</button>
     </div>
    
-    <p id="score">Score: 0</p>
+    <h3 id="score">Score: 0</h3>
     
     <div id="timer">Time left: <span id="time">60</span></div>
     
@@ -58,11 +63,11 @@
         </div>
         
     </div>
-    <h3>Made with 💖 by Rohan Chakravarty</h3>
+    <h3 id="typing-footer"></h3>
     <audio id="bomp-sound" src="sounds/bomp.wav"></audio>
     <audio id="end-sound" src="sounds/game-end.wav"></audio>
     <audio id="high-sound" src="sounds/game-end_high.wav"></audio>
-    <audio id="bgm-sound" src="sounds/Magenta Riddim (320 kbps).mp3" type="audio/mp3"></audio>
+    <audio id="bgm-sound" src="sounds/bgm.mp3" type="audio/mp3"></audio>
     <script src="script.js"></script>
 </body>
 </html>

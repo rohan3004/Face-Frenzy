@@ -12,42 +12,6 @@ const endSound = document.getElementById("end-sound");
 const highSound = document.getElementById("high-sound");
 const bgmSound = document.getElementById("bgm-sound");
 
-const headings = ["PoP Me","Did You Just Blink?","Catch Me!!","The cake is a lie","War never changes","Do a barrel roll!","Hey! Listen!","Finish him!","Would you kindly..."];
-
-let currentHeadingIndex = 0;
-const typingHeading = document.getElementById("typing-heading");
-
-function typeHeading() {
-    typingHeading.textContent = "";
-    const currentHeading = headings[currentHeadingIndex];
-    let charIndex = 0;
-
-    function type() {
-        if (charIndex < currentHeading.length) {
-            typingHeading.textContent += currentHeading.charAt(charIndex);
-            charIndex++;
-            setTimeout(type, 100); // Adjust typing speed here
-        } else {
-            setTimeout(erase, 2000); // Wait before erasing
-        }
-    }
-
-    function erase() {
-        if (charIndex > 0) {
-            typingHeading.textContent = currentHeading.substring(0, charIndex - 1);
-            charIndex--;
-            setTimeout(erase, 50); // Adjust erasing speed here
-        } else {
-            currentHeadingIndex = (currentHeadingIndex + 1) % headings.length;
-            typeHeading(); // Start typing next heading
-        }
-    }
-
-    type();
-}
-
-typeHeading(); // Start typing animation
-
 let score = 0;
 let time = 60;
 let isPlaying = false;
@@ -190,3 +154,61 @@ function startime(e) {
     timeDisplay.textContent = `Time left: ${time}`;
     }
 }
+
+document.getElementById('music-select').addEventListener('change', function() {
+    if(isPlaying==false){
+    var musicPlayer = document.getElementById('bgm-sound');
+    musicPlayer.src = this.value;
+    }
+  });
+
+
+fetch(`http://api.weatherapi.com/v1/current.json?key=fc9c2d13772441e9b72191328240604&q=Kolkata`)
+.then(response => response.json())
+.then(data => {
+  const { temp_c, wind_kph, feelslike_c, humidity, condition } = data.current;
+  const weatherArray = [
+    `Wind: ${wind_kph} kph`,
+    `Temperature: ${temp_c}°C`,
+    `Feels like: ${feelslike_c}°C`,
+    `Humidity: ${humidity}%`,
+    `Condition: ${condition.text}`,
+    `Made with 💖 by Rohan Chakravarty`
+  ];
+
+  // Display weatherArray with typing effect
+  const typingFooter = document.getElementById('typing-footer');
+  let currentArrayIndex = 0;
+  let charIndex = 0;
+
+  function typeWeather() {
+      typingFooter.textContent = "";
+      const currentArrayItem = weatherArray[currentArrayIndex];
+
+      function type() {
+          if (charIndex < currentArrayItem.length) {
+              typingFooter.textContent += currentArrayItem.charAt(charIndex);
+              charIndex++;
+              setTimeout(type, 100); // Adjust typing speed here
+          } else {
+              setTimeout(erase, 2000); // Wait before erasing
+          }
+      }
+
+      function erase() {
+          if (charIndex > 0) {
+              typingFooter.textContent = currentArrayItem.substring(0, charIndex - 1);
+              charIndex--;
+              setTimeout(erase, 50); // Adjust erasing speed here
+          } else {
+              currentArrayIndex = (currentArrayIndex + 1) % weatherArray.length;
+              typeWeather(); // Start typing next item in weatherArray
+          }
+      }
+
+      type();
+  }
+
+  typeWeather(); // Start the typing effect
+})
+.catch(error => console.error('Error fetching weather data:', error));
