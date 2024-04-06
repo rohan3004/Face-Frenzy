@@ -3,7 +3,6 @@ const startButton = document.getElementById("startButton");
 const scoreDisplay = document.getElementById("score");
 const timeDisplay = document.getElementById("timer");
 const holes = document.querySelectorAll(".hole");
-// const save = document.getElementById("save");
 const textbox = document.getElementById("userNameInput");
 
 // Select audio elements for sounds
@@ -139,7 +138,6 @@ function updateHighScore(score) {
         highScore = score;
         localStorage.setItem('highScore', score);
         document.getElementById('highScore').textContent = highScore;
-
     }
 }
 
