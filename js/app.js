@@ -22,9 +22,9 @@ function randomTime(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// Function to display images in holes
+// Function to display img in holes
 function displayImage() {
-    // Clear any active images
+    // Clear any active img
     holes.forEach(hole => hole.classList.remove("active"));
 
     // Select a random hole
@@ -82,14 +82,14 @@ function startGame() {
         }
     }, 1000);
 
-    // Start displaying images
+    // Start displaying img
     displayImage();
 }
 
 // Event listener for the start button
 startButton.addEventListener("click", startGame);
 
-// Event listener for clicking on images
+// Event listener for clicking on img
 holes.forEach(hole => {
     hole.addEventListener("click", () => {
         if (hole.classList.contains("active")) {

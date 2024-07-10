@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face Frenzy</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1>😂 Face Frenzy 😂</h1>
+    <h1>Face Frenzy</h1>
     <h2>High Score: <span id="highScore"></span></h2>
     <div id="detail">
         <select id="music-select">
-            <option value="sounds/bgm.mp3">Chipi Chipi Chapa Chapa</option>
-            <option value="sounds/bgm-new.wav">Khoka Babu</option>
-            <option value="sounds/bgm_gtaIV.mp3">GTA IV</option>
-            <option value="sounds/bgm_Goumi.mp3">Goumi</option>
-            <option value="sounds/bgm_new.mp3">Industry x Nagada Sang</option>
-            <option value="sounds/Magenta Riddim (320 kbps).mp3">Magenta Riddim</option>
+            <option value="assets/sounds/bgm.mp3">Chipi Chipi Chapa Chapa</option>
+            <option value="assets/sounds/bgm-new.wav">Khoka Babu</option>
+            <option value="assets/sounds/bgm_gtaIV.mp3">GTA IV</option>
+            <option value="assets/sounds/bgm_Goumi.mp3">Goumi</option>
+            <option value="assets/sounds/bgm_new.mp3">Industry x Nagada Sang</option>
+            <option value="assets/sounds/Magenta Riddim (320 kbps).mp3">Magenta Riddim</option>
           </select>
         <button id="save" onclick="startime(15)">15</button>
         <button id="save" onclick="startime(30)">30</button>
@@ -37,39 +37,39 @@
     
     <div class="game-board">
         <div class="hole">
-            <img src="images/2.gif" alt="Face 1">
+            <img src="img/2.gif" alt="Face 1">
         </div>
         <div class="hole">
-            <img src="images/1.gif" alt="Face 2">
+            <img src="img/1.gif" alt="Face 2">
         </div>
         <div class="hole">
-            <img src="images/3.gif" alt="Face 3">
+            <img src="img/3.gif" alt="Face 3">
         </div>
         <div class="hole">
-            <img src="images/1.gif" alt="Face 4">
+            <img src="img/1.gif" alt="Face 4">
         </div>
         <div class="hole">
-            <img src="images/2.gif" alt="Face 5">
+            <img src="img/2.gif" alt="Face 5">
         </div>
         <div class="hole">
-            <img src="images/3.gif" alt="Face 6">
+            <img src="img/3.gif" alt="Face 6">
         </div>
         <div class="hole">
-            <img src="images/3.gif" alt="Face 7">
+            <img src="img/3.gif" alt="Face 7">
         </div>
         <div class="hole">
-            <img src="images/2.gif" alt="Face 8">
+            <img src="img/2.gif" alt="Face 8">
         </div>
         <div class="hole">
-            <img src="images/1.gif" alt="Face 9">
+            <img src="img/1.gif" alt="Face 9">
         </div>
         
     </div>
     <h3 id="typing-footer"></h3>
-    <audio id="bomp-sound" src="sounds/bomp.wav"></audio>
-    <audio id="end-sound" src="sounds/game-end.wav"></audio>
-    <audio id="high-sound" src="sounds/game-end_high.wav"></audio>
-    <audio id="bgm-sound" src="sounds/bgm.mp3" type="audio/mp3"></audio>
-    <script src="script.js"></script>
+    <audio id="bomp-sound" src="assets/sounds/bomp.wav"></audio>
+    <audio id="end-sound" src="assets/sounds/game-end.wav"></audio>
+    <audio id="high-sound" src="assets/sounds/game-end_high.wav"></audio>
+    <audio id="bgm-sound" src="assets/sounds/bgm.mp3" type="audio/mp3"></audio>
+    <script src="js/app.js"></script>
 </body>
 </html>
